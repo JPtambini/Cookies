@@ -5,11 +5,10 @@ $(document).ready(function(){
 		Cookies.set("color_picked", color);
 	}
 	if(Cookies.get("color_picked")){
-	
+		
+		$("#button").click("background-color");
+		$("body").css("background-color",Cookies.get("color_picked"));
+		$("body").trigger("color_picked");
 	}
-		$("#button").click(function(){
-			
-		$("body").css("background-color",Cookies.get("color-picked"));
-		});
-
+		
 });
